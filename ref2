@@ -19,20 +19,21 @@
 
 
 -----------------    git add     ------------    git commit    ----------
-working directory  ----------->  staging area  ------------->  repository
+working-directory  ----------->  staging-area  ------------->  repository
 -----------------                ------------                  ----------
                      git diff                 git diff --staged     git diff <old_commit_id> <new_commit_id>
 
 
-git add  <filename>               # add file  FROM  working directory  TO  staging area
-git commit			  # commit    FROM  staging area       TO  repository   (follow guidelines for message)
+git add  <filename>               # add file  FROM  working-directory  TO  staging-area
+git commit			  # commit    FROM  staging-area       TO  repository   (follow guidelines for message)
 
 git status                        # view status
 git log                           # view log of commits
 
-git diff                          # view changes between working directory and staging area
-git diff --staged                 # view changes between staging area and current-HEAD in repository
+git diff                          # view changes between working-directory and staging-area
+git diff --staged                 # view changes between staging-area and current-HEAD in repository
 git diff <old_cid> <new_cid>      # view changes between two commits in the repository
 
 git reset  <filename>             # remove file from staging area
+git reset --hard                  # (irreversible) discard changes in working-directory AND staging-area
 git commit  -m "your message"     # commit from staging area, follow guidelines for message
