@@ -1,0 +1,34 @@
+Reflections
+-----------
+Use version control for ALL software and hardware coding projects!
+
+1) How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+2) How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+3) What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git,
+   vs having versions automatically saved, like Google Docs does?
+
+4) Why do you think some version control systems, like Git, allow saving multiple files in one commit,
+   while others, like Google Docs, treat each file separately?
+
+5) How can you use the commands git log and git diff to view the history of files?
+
+6) How might using version control make you more confident to make changes that could break something?
+   -- be more of risk taker, without breaking the entire project
+   -- explore a large coding-change space without going back to fix the project
+   -- be more confident! :)
+
+7) Setup terminal with settings to allow for easier development with git. (use the files)
+   Now that you have your workspace set up, what do you want to try using Git for?
+
+
+Ctrl+Shift+C and Ctrl+Shift+V in Linux
+
+git init                                      # create a new git repository in current working directory (offline)
+git clone <url>                               # copy an existing git repository
+
+git log                                       # history of commits (changes / versions)
+git diff  <old_commit_id>  <new_commit_id>    # compare two commits (changes / versions)
+
+git checkout  <commit_id>                     # will get you a previous version BUT in a detatched-HEAD state (not-most-recent state)
