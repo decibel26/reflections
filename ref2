@@ -30,9 +30,9 @@ git commit			  # commit    FROM  staging-area       TO  repository   (follow gui
 git status                        # view status
 git log                           # view log of commits
 
-git diff                          # view changes between working-directory and staging-area
-git diff --staged                 # view changes between staging-area and current-HEAD in repository
-git diff <old_cid> <new_cid>      # view changes between two commits in the repository
+git diff                          # view changes between  working-directory  and  staging-area
+git diff --staged                 # view changes between                          staging-area  and  repository (current-HEAD)
+git diff <old_cid> <new_cid>      # view changes between                                             two commits in the repository
 
 git reset  <filename>             # remove file from staging area
 git reset --hard                  # (irreversible) discard changes in working-directory AND staging-area
