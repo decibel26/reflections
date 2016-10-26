@@ -21,7 +21,7 @@
 
 6) What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
    * merging (lines of files) can be very very subjective and situational
-   * when merging one branch into another, one can retain the commits of both
+   * when merging one branch into another (say x_branch into master), one can retain the commit histories of both branches
    * you can delete a branch (branch name) after merging
 
 7) What are the pros and cons of git's automatic merging vs. always doing merges manually?
@@ -57,5 +57,15 @@ git log                           # see commit history for current branch
 git log --graph --oneline         # see commit history graph for current branch (one line per commit)
 git log --graph --oneline  master <branch_name>    # see commit history graph (compare "master" with "branch_name")
 
-git merge master <branch_name>    # merge branch_name into master
+git checkout <branch1>
+git merge <branch1> <branch2>     # merge branch2 into branch1 (will include commit histories from both branches)
+                                  #   - will also include the currently checked-out branch in the merged version
+                                  #   - so always checkout the branch label you want to point to the new commit PRIOR TO doing the merge
+eg: git checkout master
+    git merge master <branch2>
+
 git log --graph --online          # see commit history after merge
+git merge --abort                 #
+ 
+git show                          # compare current commit with parent commit
+git show <cid>                    # compare commit <cid> with it's parent commit
