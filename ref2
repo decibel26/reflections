@@ -20,6 +20,9 @@
    * tells us about the reachability of commits (based on id) -- so that changes don't become unreachable and lost
 
 6) What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+   * merging (lines of files) can be very very subjective and situational
+   * when merging one branch into another, one can retain the commits of both
+   * you can delete a branch (branch name) after merging
 
 7) What are the pros and cons of git's automatic merging vs. always doing merges manually?
 
@@ -53,3 +56,5 @@ git checkout -b <branch_name>     # create and checkout branch_name (from presen
 git log                           # see commit history for current branch
 git log --graph --oneline         # see commit history graph for current branch (one line per commit)
 git log --graph --oneline  master <branch_name>    # see commit history graph (compare "master" with "branch_name")
+
+git merge master <branch_name>    # merge branch_name into master
