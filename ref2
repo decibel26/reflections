@@ -17,6 +17,7 @@
    * collaborate with other individuals in a team -- merge branches/changes eventually (after testing)
 
 5) How do the diagrams help you visualize the branch structure?
+   * tells us about the reachability of commits (based on id) -- so that changes don't become unreachable and lost
 
 6) What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
@@ -46,5 +47,9 @@ git reset --hard                  # (irreversible) discard changes in working-di
 git commit -m "your message"      # commit from staging area, follow guidelines for message
 
 git branch                        # current branch
-git branch <new_branch>           # create new branch
-git checkout <branch_name>        # change to branch_name 
+git branch <branch_name>          # create new branch called "branch_name" from present commit/branch
+git checkout <branch_name>        # change to branch_name
+git checkout -b <branch_name>     # create and checkout branch_name (from present commit/branch)
+git log                           # see commit history for current branch
+git log --graph --oneline         # see commit history graph for current branch (one line per commit)
+git log --graph --oneline  master <branch_name>    # see commit history graph (compare "master" with "branch_name")

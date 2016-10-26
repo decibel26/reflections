@@ -28,7 +28,7 @@ Ctrl+Shift+C and Ctrl+Shift+V in Linux
 git init                                      # create a new git repository in current working directory (offline)
 git clone <url>                               # copy an existing git repository
 
-git log                                       # history of commits (changes / versions)
+git log                                       # history of commits (changes / versions) [of current branch]
 git diff <old_commit_id> <new_commit_id>      # compare two commits (changes / versions)
 
 git checkout <commit_id>                      # will get you a previous version BUT in a detatched-HEAD state ('unnamed' not-most-recent state)
