@@ -29,7 +29,8 @@ git init                                      # create a new git repository in c
 git clone <url>                               # copy an existing git repository
 
 git log                                       # history of commits (changes / versions) [of current branch]
-git diff <old_commit_id> <new_commit_id>      # compare two commits (changes / versions)
+git diff <old_commit_id> <new_commit_id>      # compare two commits (changes / versions) -- USEFUL when you have large merges and want to make changes from fork points
+git show <commit_id>                          # compare commit_id with it's parent (WHEN you just want to compare with its parent USE THIS instead of git diff)
 
 git checkout <commit_id>                      # will get you a previous version BUT in a detatched-HEAD state ('unnamed' not-most-recent state)
 git checkout master                           # go to latest commit
