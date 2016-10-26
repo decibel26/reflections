@@ -9,12 +9,14 @@
 
 4) What are some situations when branches would be helpful in keeping your history organized?
    How would branches help?
+   - create experimental changes: incremental OR massive
+   - create different-versions
 
 5) How do the diagrams help you visualize the branch structure?
 
 6) What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
-7) What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges manually?
+7) What are the pros and cons of git's automatic merging vs. always doing merges manually?
 
 
 
@@ -38,3 +40,7 @@ git diff <old_cid> <new_cid>      # view changes between                        
 git reset <filename>              # remove file from staging area
 git reset --hard                  # (irreversible) discard changes in working-directory AND staging-area
 git commit -m "your message"      # commit from staging area, follow guidelines for message
+
+git branch                        # current branch
+git branch <new_branch>           # create new branch
+git checkout <branch_name>        # change to branch_name 
