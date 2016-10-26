@@ -58,3 +58,4 @@ git log --graph --oneline         # see commit history graph for current branch 
 git log --graph --oneline  master <branch_name>    # see commit history graph (compare "master" with "branch_name")
 
 git merge master <branch_name>    # merge branch_name into master
+git log --graph --online          # see commit history after merge
