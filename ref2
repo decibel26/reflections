@@ -9,8 +9,12 @@
 
 4) What are some situations when branches would be helpful in keeping your history organized?
    How would branches help?
-   - create experimental changes: incremental OR massive
-   - create different-versions
+   * master/production branch -- never breaks, always works
+   * create experimental changes in a development branch: incremental OR massive AND be able to go back to earlier versions
+   * create completely different-versions
+   * moving onto a completely different piece of work - create a new feature, fix a bug
+   * collaborate with yourself -- be able to context switch on different work / if you are bored with current fix
+   * collaborate with other individuals in a team -- merge branches/changes eventually (after testing)
 
 5) How do the diagrams help you visualize the branch structure?
 
