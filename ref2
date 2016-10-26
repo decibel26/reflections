@@ -32,8 +32,9 @@ git log                           # view log of commits
 
 git diff                          # view changes between  working-directory  and  staging-area
 git diff --staged                 # view changes between                          staging-area  and  repository (current-HEAD)
+git diff HEAD                     # view changes between  working-directory  and                     repository (current-HEAD)
 git diff <old_cid> <new_cid>      # view changes between                                             two commits in the repository
 
-git reset  <filename>             # remove file from staging area
+git reset <filename>              # remove file from staging area
 git reset --hard                  # (irreversible) discard changes in working-directory AND staging-area
-git commit  -m "your message"     # commit from staging area, follow guidelines for message
+git commit -m "your message"      # commit from staging area, follow guidelines for message
