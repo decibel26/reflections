@@ -18,8 +18,14 @@
 6) Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 
 7) Forking = cloning any repo on github itself (while keeping the link to the original repo, and assigning credit to original author(s))
-   On github, you can now ADD collaborators to the fork.
+   On github, you can now GO TO settings and ADD collaborators to the fork.
    You can now git clone the forked repo on your local machine, make edits, without affecting the original repo BUT having the link on github
+
+8) Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+9) Conflicts (seen with git pull) between local and remote repos arise WHEN:
+   * there are multiple collaborators changing the same lines in files
+   * same lines in files have been changed in local and on remote github
 
 
 git remote                              # view remote repositories
