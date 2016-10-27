@@ -34,7 +34,7 @@ git remote add <remote_label> <url>     # create label "remote_label" (eg: origi
 git remote -v                           # view verbose description of remote repo labels
 git push <remote_label> master          # push changes from local (master) to remote (remote_label)
 Make changes on github / another machine
-git pull <remote_label> master          # pull remote repo (eg: origin) changes to local repo branch master
+git pull <remote_label> master          # pull remote repo (eg: origin) changes to local repo branch master AND merge them!
 
 Fork repo on github
 git clone <url>                         # clone forked repo on local
