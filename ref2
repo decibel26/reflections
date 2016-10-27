@@ -34,7 +34,7 @@
        =======                                                                       |---> visually see changes between ancestor and branch to-be-merged
            SECTION 3   --> code in master (branch to-be-merged)                -->----
        >>>>>>> master
-   * you need to combine to get final code AND delete <<<< |||| >>>> lines
+   * you need to understand, collaborate and combine to get final code AND delete <<<< |||| >>>> lines
 
 
 -----------------    git add     ------------       git commit           ----------
