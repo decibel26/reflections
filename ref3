@@ -1,0 +1,7 @@
+1) Share code in repositories on github (includes several personal and open-source projects)
+   Collaborate on code projects with other individuals.
+   * Public  -- Anyone can see/clone the git repository. You as a "maintainer" can choose who can commit. Do code reviews. Test infrastructure?
+   * Private -- Paid. You can choose who can see and commit to the git repository.
+
+2) Add ssh-key
+   https://help.github.com/articles/caching-your-github-password-in-git/

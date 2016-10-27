@@ -34,7 +34,9 @@
        =======                                                                       |---> visually see changes between ancestor and branch to-be-merged
            SECTION 3   --> code in master (branch to-be-merged)                -->----
        >>>>>>> master
-   * you need to understand, collaborate and combine to get final code AND delete <<<< |||| >>>> lines
+   * you need to resolve conflict: understand, collaborate and combine to get final code AND delete <<<< |||| >>>> lines
+   * git add
+   * git status
 
 
 -----------------    git add     ------------       git commit           ----------
@@ -78,6 +80,10 @@ git merge <branch1> <branch2>     # merge branch2 into branch1 (will include com
                                   #   - will also include the currently checked-out branch in the merged version
                                   #   - so always checkout the branch label you want to point to the new commit PRIOR TO doing the merge
                                   #   - merging creates a new commit in the current checked-out branch (git branch)
+vim <file>                        # modify file <<<< |||| >>>>
+git add <file>
+git commit
+git log -n 1                      # shows only last commit (which is the "git merge" THEN "git commit" COMBINED)
 git log --graph --oneline         # see commit history after merge
 git branch -d <branch2>           # delete branch2 label, since you don't need the label anymore (can access branch2 commits from merged branch1)
 
