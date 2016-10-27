@@ -39,12 +39,12 @@
    * git status
 
 
------------------    git add     ------------       git commit           ----------
-working-directory  ----------->  staging-area  ----------------------->  repository
------------------                ------------                            ----------
-              <----- git diff ----->       <------ git diff --staged ------>   git diff <old_commit_id> <new_commit_id>
-                                                                               git show
+-----------------    git add     ------------       git commit           ------------------   git push origin master ---->  ----------------------------
+working-directory  ----------->  staging-area  ----------------------->  repository (local)                                 repository (remote) [origin]
+-----------------                ------------                            ------------------  <---- git pull origin master   ----------------------------
+              <----- git diff ----->       <------ git diff --staged ------>   git show
                                                                                git show <cid>
+                                                                               git diff <old_commit_id> <new_commit_id>
               <---------------------  git diff HEAD  ---------------------->
 
 
