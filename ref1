@@ -1,6 +1,7 @@
 Reflections
 -----------
 Use version control for ALL software and hardware coding projects!
+Find all git repos in dir: $ find . -name .git -type d -prune
 
 1) How did viewing a diff between two versions of a file help you see the bug that was introduced?
 

@@ -23,7 +23,7 @@
 
 8) Describe the differences between forks, clones, and branches. When would you use one instead of another?
 
-9) Conflicts (seen with git pull) between local and remote repos arise WHEN:
+9) Conflicts between local and remote repos arise WHEN:
    * there are multiple collaborators changing the same lines in files
    * same lines in files have been changed in local and on remote github
 
@@ -35,7 +35,14 @@ git remote -v                           # view verbose description of remote rep
 git push <remote_label> master          # push changes from local (master) to remote (remote_label)
 Make changes on github / another machine
 git pull <remote_label> master          # pull remote repo (eg: origin) changes to local repo branch master AND merge them!
+                                        # - which is: git pull <remote_label> master == git fetch <remote_label>  &&  git merge master <remote_label>/master
+                                        #         eg: git pull origin master == git fetch origin  &&  git merge master origin/master
 
 Fork repo on github
-git clone <url>                         # clone forked repo on local
-git remote -v                           # already setup push and pull to remote_label (eg: origin)
+git clone <url>                         # clone forked repo on local, cloning setups up the remote label for you
+                                        # - it ALSO locally saves the state of all the remote braches as: remotes/<remote_label>/<remote_branch> eg: remotes/origin/master
+git remote -v                           # git clone already setup the push and pull to "remote_label" (eg: origin)
+
+git fetch origin                                  # 
+git branch -a                                     # 
+git log --graph --oneline master origin/master    # 
