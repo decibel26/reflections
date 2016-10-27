@@ -20,20 +20,30 @@
    * tells us about the reachability of commits (based on id) -- so that changes don't become unreachable and lost
 
 6) What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+   * merging creates a new commit
    * merging (lines of files) can be very very subjective and situational -- will need to collaborate with the individuals to resolve
    * when merging one branch into another (say x_branch into master), one can retain and view the commit histories of both branches
    * you can delete a branch (branch name) after merging
 
 7) What are the pros and cons of git's automatic merging vs. always doing merges manually?
+   * git status, open conflicting file AND resolve merge conflicts by understanding the code sections AND collaborating with individuals:
+       <<<<<<< HEAD
+           SECTION 1   --> code in current commit (HEAD) of checked-out branch -->----
+       ||||||| merged common ancestors                                               |---> visually see changes between ancestor and current branch
+           SECTION 2   ----> code in the common ancestor of the two branches   -->----
+       =======                                                                       |---> visually see changes between ancestor and branch to-be-merged
+           SECTION 3   --> code in master (branch to-be-merged)                -->----
+       >>>>>>> master
+   * you need to combine to get final code AND delete <<<< |||| >>>> lines
 
 
-
------------------    git add     ------------    git commit    ----------
-working-directory  ----------->  staging-area  ------------->  repository
------------------                ------------                  ----------
-                     git diff                 git diff --staged     git diff <old_commit_id> <new_commit_id>
-                                                                    git show
-                                                                    git show <cid>
+-----------------    git add     ------------       git commit           ----------
+working-directory  ----------->  staging-area  ----------------------->  repository
+-----------------                ------------                            ----------
+              <----- git diff ----->       <------ git diff --staged ------>   git diff <old_commit_id> <new_commit_id>
+                                                                               git show
+                                                                               git show <cid>
+              <---------------------  git diff HEAD  ---------------------->
 
 
 git add  <filename>               # add file  FROM  working-directory  TO  staging-area
@@ -67,6 +77,7 @@ git checkout <branch1>            # first checkout "branch to merge into"
 git merge <branch1> <branch2>     # merge branch2 into branch1 (will include commit histories from both branches)
                                   #   - will also include the currently checked-out branch in the merged version
                                   #   - so always checkout the branch label you want to point to the new commit PRIOR TO doing the merge
+                                  #   - merging creates a new commit in the current checked-out branch (git branch)
 git log --graph --oneline         # see commit history after merge
 git branch -d <branch2>           # delete branch2 label, since you don't need the label anymore (can access branch2 commits from merged branch1)
 
