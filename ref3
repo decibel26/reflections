@@ -17,11 +17,17 @@
 
 6) Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 
-7) Forking = cloning a repo on github itself (while keeping the link to the original repo, and assigning credit to original author(s))
+7) Forking = cloning any repo on github itself (while keeping the link to the original repo, and assigning credit to original author(s))
    You can now git clone the forked repo on your local machine, make edits, without affecting the original repo BUT having the link on github
 
 
 git remote                              # view remote repositories
+
 git remote add <remote_label> <url>     # create label "remote_label" (eg: origin) to existing "url" on github
-git push <remote_label> master          # push changes from local to remote
+git remote -v                           # view verbose description of remote repo labels
+git push <remote_label> master          # push changes from local (master) to remote (remote_label)
+Make changes on github / another machine
 git pull <remote_label> master          # pull remote repo (eg: origin) changes to local repo branch master
+
+Fork repo on github
+git clone <url>                         # clone forked repo on local
