@@ -5,3 +5,11 @@
 
 2) Add ssh-key
    https://help.github.com/articles/caching-your-github-password-in-git/
+
+3) In order to push/pull to/from github, you need to:
+   * FIRST create the repository on github --> use the + button on the webpage
+   * THEN label it on your local machine
+
+
+git remote                              # view remote repositories
+git remote add <remote_label> <url>     # create label "remote_label" (eg: origin) to existing "url" on github
