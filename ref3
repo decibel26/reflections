@@ -10,6 +10,13 @@
    * FIRST create the repository on github --> use the + button on the webpage
    * THEN label it on your local machine
 
+4) Now you can view your repository files and commits on github.
+   You can add new files on github itself OR push from a different computer.
+
+5) When would you want to use a remote repository rather than keeping all your work local?
+
 
 git remote                              # view remote repositories
 git remote add <remote_label> <url>     # create label "remote_label" (eg: origin) to existing "url" on github
+git push <remote_label> master          # push changes from local to remote
+git pull <remote_label> master          # pull remote repo (eg: origin) changes to local repo branch master
