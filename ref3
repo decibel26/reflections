@@ -46,3 +46,8 @@ git remote -v                           # git clone already setup the push and p
 git fetch origin                                  # 
 git branch -a                                     # 
 git log --graph --oneline master origin/master    # 
+
+# MERGE pull request from remote into existing local repo (which has changes)
+git stash
+git pull
+git stash apply
