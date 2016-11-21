@@ -79,7 +79,7 @@ git log --graph --oneline  master <branch_name>    # see commit history graph (c
 # -----
 git checkout <branch1>            # first checkout "branch to merge into"
 git merge <branch1> <branch2>     # merge branch2 into branch1 (will include commit histories from both branches)
-                                  #   - will also include the currently checked-out branch in the merged version
+ OR git merge <branch2>           #   - will also include the currently checked-out branch in the merged version
                                   #   - so always checkout the branch label you want to point to the new commit PRIOR TO doing the merge
                                   #   - merging creates a new commit in the current checked-out branch (git branch)
 vim <file>                        # modify file <<<< |||| >>>>
@@ -96,3 +96,5 @@ example: merge coins into master and look at the graph
   git branch -d coins
 
 git merge --abort                 # Restore files to the state before you started the merge
+
+git branch -d <branch-name>       # delete the branch "branch-name"
