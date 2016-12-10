@@ -88,6 +88,7 @@ git commit
 git log -n 1                      # shows only last commit (which is the "git merge" THEN "git commit" COMBINED)
 git log --graph --oneline         # see commit history after merge
 git branch -d <branch2>           # delete branch2 label, since you don't need the label anymore (can access branch2 commits from merged branch1)
+git log -- <filename>             # change history of "filename"
 
 example: merge coins into master and look at the graph
   git checkout master
